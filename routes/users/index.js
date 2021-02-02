@@ -2,6 +2,9 @@
 
 module.exports = async function (fastify, opts) {
   fastify.get('/', async function (request, reply) {
-    return `this is an example: someSupport: ${fastify.someSupport()}`
+    const {
+      query
+    } = request;
+    reply.send(fastify.usersGet(query));
   })
 }
