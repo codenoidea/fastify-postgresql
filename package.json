@@ -1,0 +1,45 @@
+{
+  "name": "fastify-postgresql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "nodemonConfig": {
+    "exec": "npm run dev",
+    "watch": [
+      "./src/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
+  },
+  "dependencies": {
+    "fastify": "^3.0.0",
+    "fastify-autoload": "^3.3.1",
+    "fastify-cli": "^2.7.0",
+    "fastify-compress": "^3.4.1",
+    "fastify-helmet": "^5.2.0",
+    "fastify-plugin": "^3.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "tap": "^14.11.0"
+  },
+  "scripts": {
+    "test": "tap test/**/*.test.js",
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js",
+    "nd": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-codenoidea:codenoidea/fastify-postgresql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
