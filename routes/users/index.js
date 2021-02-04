@@ -5,6 +5,7 @@ module.exports = async function (fastify, opts) {
     const {
       query
     } = request;
-    reply.send(fastify.usersGet(query));
+    const result = await fastify.usersGet(query);
+    reply.send(result);
   })
 }
